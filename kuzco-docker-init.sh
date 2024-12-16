@@ -22,9 +22,6 @@ sudo apt-cache policy docker-ce
 # Cài đặt Docker
 sudo apt install docker-ce -y
 
-# Kiểm tra trạng thái Docker
-sudo systemctl status docker
-
 # Cài đặt NVIDIA Container Toolkit
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
 curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
@@ -43,8 +40,8 @@ sudo apt-get install -y nvidia-container-toolkit
 # Cấu hình runtime NVIDIA cho Docker
 sudo nvidia-ctk runtime configure --runtime=docker
 
-# Khởi động lại Docker
-sudo systemctl restart docker
-
 # Thêm user vào group Docker
 sudo usermod -aG docker $USER
+
+# Khởi động lại Docker
+sudo systemctl restart docker
