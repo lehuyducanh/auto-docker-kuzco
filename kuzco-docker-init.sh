@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+sudo apt update -y && apt upgrade -y
 # Cài đặt gnome-terminal
 sudo apt install gnome-terminal -y
 
